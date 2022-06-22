@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Final-Project</string>
+    <string name="username">Username</string>
+    <string name="add_mentor">Add Mentor</string>
+    <string name="password">password</string>
+    <string name="username1">username</string>
+    <string name="password1">Password</string>
+</resources>
