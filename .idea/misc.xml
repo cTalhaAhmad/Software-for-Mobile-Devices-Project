@@ -11,8 +11,17 @@
         <entry key="app/src/main/res/layout/activity_assgin_sub_event_main.xml" value="0.32407407407407407" />
         <entry key="app/src/main/res/layout/activity_assign_event_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4140625" />
-        <entry key="app/src/main/res/layout/activity_mentor_portal.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_mentor_portal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_ocportal_main.xml" value="0.41510416666666666" />
+        <entry key="app/src/main/res/layout/activity_portal_participant_main.xml" value="0.41510416666666666" />
+        <entry key="app/src/main/res/layout/activity_praticipant_sign_in_main.xml" value="0.41510416666666666" />
+        <entry key="app/src/main/res/layout/activity_register_participant_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_set_event_update_main.xml" value="0.22083333333333333" />
+        <entry key="app/src/main/res/layout/activity_set_score_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_set_venue_sub_event_main.xml" value="0.4087179487179487" />
+        <entry key="app/src/main/res/layout/activity_show_venue_main.xml" value="0.41510416666666666" />
         <entry key="app/src/main/res/layout/activity_signin_mentor_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_signin_ocmain.xml" value="0.38392857142857145" />
       </map>
     </option>
   </component>

@@ -36,7 +36,7 @@ public class AssginSubEventMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_assgin_sub_event_main);
 
         editTextEvent=findViewById(R.id.edtevent);
-        editTextMentor=findViewById(R.id.edtmentro);
+        editTextMentor=findViewById(R.id.edtoc);
         subEventList =new ArrayList<String>();
         ocList =new ArrayList<String>();
 
@@ -94,7 +94,9 @@ public class AssginSubEventMainActivity extends AppCompatActivity {
             if (subEventList.contains(eventTxt)
                     && ocList.contains(mentorTxt)){
                 reference = database.getReference("/oc");
-                reference.child(mentorTxt).child("event").setValue(eventTxt);
+                reference.child(mentorTxt).child("event").setValue(event);
+
+                reference.child(mentorTxt).child("subevent").setValue(eventTxt);
             }
             else {
                 Toast.makeText(this, "Event or Mentor Does Not Exist", Toast.LENGTH_SHORT).show();

@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.final_project.AdminSide.AddMentorActivity;
 import com.example.final_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,10 +34,10 @@ public class MentorPortalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mentor_portal);
         database=FirebaseDatabase.getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
         reference= database.getReference("mentor");
-        buttonAddSubEvent=findViewById(R.id.addeventbtn);
-        buttonAssignEvent=findViewById(R.id.assigneventbtn);
-        buttonRegOC=findViewById(R.id.regocbtn);
-        buttonEventShow=findViewById(R.id.showeventregbtn);
+        buttonAddSubEvent=findViewById(R.id.btnsetvenue);
+        buttonAssignEvent=findViewById(R.id.btneventupdt);
+        buttonRegOC=findViewById(R.id.btnsetscore);
+        buttonEventShow=findViewById(R.id.btnallregoc);
         intent= getIntent();
         username= intent.getStringExtra("mentor").toString();
         textViewMentor=findViewById(R.id.txtmentor);

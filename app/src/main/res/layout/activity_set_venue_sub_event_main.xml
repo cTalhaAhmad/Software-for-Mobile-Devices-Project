@@ -5,8 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="200dp"
-    tools:context=".MentorSide.AssginSubEventMainActivity">
+    android:paddingTop="100dp"
+    tools:context=".OCsideSide.SetVenueSubEventMainActivity">
+
+    <TextView
+        android:id="@+id/textmainevent"
+        android:layout_width="match_parent"
+        android:paddingBottom="100dp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="Event"
+            android:text="Venue"
             android:textSize="16sp" />
 
         <EditText
@@ -30,47 +38,23 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Sub-Event Name"
+            android:hint="venue"
             android:inputType="textPersonName"
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:paddingTop="50dp">
-
-        <TextView
-            android:id="@+id/txtpass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="Mentor"
-            android:textSize="16sp" />
-
-        <EditText
-
-            android:id="@+id/edtoc"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="Mentor Name"
-            android:inputType="textPersonName"
-            android:textSize="20sp" />
-    </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
-        android:onClick="assign_subevent"
-        android:text="Assign Event"
+        android:onClick="insert_sub_event_venue"
+        android:text="Set Venue"
         android:textSize="20sp" />
 
 
+
+
 </LinearLayout>
+

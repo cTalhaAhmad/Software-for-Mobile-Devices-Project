@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="200dp"
-    tools:context=".MentorSide.SigninMentorMainActivity">
+    android:paddingTop="70dp"
+    tools:context=".ParticipantSide.RegisterParticipantMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,13 +63,63 @@
             android:textSize="20sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="event" />
+
+        <Spinner
+            android:id="@+id/dropevents"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:id="@+id/txtsubevent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Sub-event" />
+
+        <Spinner
+            android:id="@+id/dropsubevent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/button"
-        android:onClick="mentor_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
-        android:text="@string/add_mentor"
+        android:onClick="signUp"
+        android:text="signUp"
         android:textSize="20sp" />
 
 

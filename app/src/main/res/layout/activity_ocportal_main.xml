@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_weight="5"
     android:orientation="vertical"
-    tools:context=".MentorSide.MentorPortalActivity">
+    tools:context=".OCsideSide.OCportalMainActivity">
 
     <TextView
         android:id="@+id/txtmentor"
@@ -21,27 +21,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:onClick="add_sub_event"
         android:layout_weight="1"
-        android:text="Add Sub-Events" />
+        android:onClick="add_sub_event_venue"
+        android:text="Set Venue" />
 
     <Button
         android:id="@+id/btnsetscore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="click_set_winner"
         android:layout_margin="30dp"
-        android:onClick="reg_oc"
         android:layout_weight="1"
-        android:text="Register OC" />
+        android:text="Set Scoreboard" />
 
     <Button
         android:id="@+id/btneventupdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="click_update_event"
         android:layout_margin="30dp"
         android:layout_weight="1"
-        android:onClick="goto_assign_subevent"
-        android:text="Assign Sub-Event" />
+        android:text="Event-Upate" />
 
     <Button
         android:id="@+id/btnallregoc"
@@ -49,5 +49,5 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_weight="1"
-        android:text="Event Registeration" />
+        android:text="All Registeration" />
 </LinearLayout>

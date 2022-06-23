@@ -28,7 +28,7 @@ public class AddOCMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_ocmain);
         editTextName = findViewById(R.id.edtevent);
         context = getBaseContext();
-        editTextPass = findViewById(R.id.edtmentro);
+        editTextPass = findViewById(R.id.edtoc);
         database = FirebaseDatabase.getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
         reference = database.getReference("oc");
     }

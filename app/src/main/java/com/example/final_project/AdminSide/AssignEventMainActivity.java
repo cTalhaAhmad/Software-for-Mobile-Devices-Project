@@ -37,7 +37,7 @@ public class AssignEventMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assign_event_main);
         editTextEvent=findViewById(R.id.edtevent);
-        editTextMentor=findViewById(R.id.edtmentro);
+        editTextMentor=findViewById(R.id.edtoc);
         eventList=new ArrayList<String>();
         mentorList=new ArrayList<String>();
 

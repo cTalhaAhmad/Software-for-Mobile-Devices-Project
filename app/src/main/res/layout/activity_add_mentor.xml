@@ -52,7 +52,7 @@
 
         <EditText
 
-            android:id="@+id/edtmentro"
+            android:id="@+id/edtoc"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_weight="1"
