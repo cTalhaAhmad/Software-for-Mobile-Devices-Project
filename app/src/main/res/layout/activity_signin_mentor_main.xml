@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingTop="200dp"
-    tools:context=".AdminSide.AssignEventMainActivity">
+    tools:context=".MentorSide.SigninMentorMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="Event"
+            android:text="@string/username"
             android:textSize="16sp" />
 
         <EditText
@@ -30,7 +30,7 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Event Name"
+            android:hint="@string/username1"
             android:inputType="textPersonName"
             android:textSize="20sp" />
     </LinearLayout>
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="Mentor"
+            android:text="@string/password1"
             android:textSize="16sp" />
 
         <EditText
@@ -58,18 +58,18 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Mentor Name"
-            android:inputType="textPersonName"
+            android:hint="@string/password"
+            android:inputType="textPassword"
             android:textSize="20sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/button"
+        android:onClick="mentor_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
-        android:onClick="assign_event"
-        android:text="Assign Event"
+        android:text="@string/add_mentor"
         android:textSize="20sp" />
 
 

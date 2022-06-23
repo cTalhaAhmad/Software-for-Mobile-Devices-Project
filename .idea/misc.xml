@@ -5,8 +5,14 @@
       <map>
         <entry key="app/src/main/res/layout/activity_add_event_main.xml" value="0.17966101694915254" />
         <entry key="app/src/main/res/layout/activity_add_mentor.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_assign_event_main.xml" value="0.28425925925925927" />
+        <entry key="app/src/main/res/layout/activity_add_ocmain.xml" value="0.27314814814814814" />
+        <entry key="app/src/main/res/layout/activity_add_sub_event_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_add_sub_event_main2.xml" value="0.29930394431554525" />
+        <entry key="app/src/main/res/layout/activity_assgin_sub_event_main.xml" value="0.32407407407407407" />
+        <entry key="app/src/main/res/layout/activity_assign_event_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4140625" />
+        <entry key="app/src/main/res/layout/activity_mentor_portal.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_signin_mentor_main.xml" value="0.1" />
       </map>
     </option>
   </component>
