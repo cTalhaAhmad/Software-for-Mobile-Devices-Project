@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,6 +8,21 @@
     android:orientation="vertical"
     android:paddingTop="200dp"
     tools:context=".OCsideSide.SigninOCMainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="170dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/a13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,8 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="OC username"
-            android:textSize="16sp" />
+            android:text="OC Username"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edtevent"
@@ -30,7 +47,8 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/username1"
+            android:gravity="center"
+            android:hint="Username Here"
             android:inputType="textPersonName"
             android:textSize="20sp" />
     </LinearLayout>
@@ -48,7 +66,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/password1"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
 
@@ -58,7 +77,8 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/password"
+            android:gravity="center"
+            android:hint="Password Here"
             android:inputType="textPassword"
             android:textSize="20sp" />
     </LinearLayout>
@@ -68,6 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
+        android:backgroundTint="@color/black"
         android:onClick="OC_signin"
         android:text="OC Sign-In"
         android:textSize="20sp" />

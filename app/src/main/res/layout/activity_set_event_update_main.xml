@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,13 +9,20 @@
     android:paddingTop="100dp"
     tools:context=".OCsideSide.setEventUpdateMainActivity">
 
-    <TextView
-        android:id="@+id/textmainevent"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="100dp"
-        android:text="TextView"
-        android:textSize="20sp" />
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="170dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/a13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +37,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Update"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edtevent"
@@ -38,7 +47,8 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="news"
+            android:gravity="center"
+            android:hint="News Here"
             android:inputType="textPersonName"
             android:textSize="20sp" />
     </LinearLayout>
@@ -49,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
+        android:backgroundTint="@color/black"
         android:onClick="event_update"
         android:text="Update Event News"
         android:textSize="20sp" />
