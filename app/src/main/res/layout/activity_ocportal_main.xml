@@ -47,6 +47,7 @@
         android:id="@+id/btnallregoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="show_reg_oc"
         android:layout_margin="30dp"
         android:layout_weight="1"
         android:text="All Registeration" />

@@ -95,4 +95,9 @@ public class OCportalMainActivity extends AppCompatActivity {
         intent1.putExtra("subevent",subevent);
         startActivity(intent1);
     }
+
+    public void show_reg_oc(View view) {
+        Intent intent1=new Intent(this,ShowRegMainActivity.class);
+        startActivity(intent1);
+    }
 }

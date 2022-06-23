@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.final_project.OCsideSide.ShowRegMainActivity;
 import com.example.final_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -85,5 +86,10 @@ public class MentorPortalActivity extends AppCompatActivity {
         Intent intent= new Intent(this, AssginSubEventMainActivity.class);
         intent.putExtra("event",event);
         startActivity(intent);
+    }
+
+    public void show_reg_mentor(View view) {
+        Intent intent1=new Intent(this, ShowRegMainActivity.class);
+        startActivity(intent1);
     }
 }

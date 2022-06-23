@@ -37,6 +37,7 @@ public class SetVenueSubEventMainActivity extends AppCompatActivity {
 
         textView=findViewById(R.id.textmainevent);
         textView.setText("Add Venue of Sub-Events: "+subevent);
+
     }
 
     public void insert_sub_event_venue(View view) {

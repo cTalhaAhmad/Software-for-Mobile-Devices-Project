@@ -80,7 +80,7 @@ public class PortalParticipantMainActivity extends AppCompatActivity {
     }
 
     public void Show_Venue(View view) {
-        Intent intent = new Intent(this, PortalParticipantMainActivity.class);
+        Intent intent = new Intent(this, ShowVenueMainActivity.class);
         intent.putExtra("user",name );
         intent.putExtra("event",event);
         intent.putExtra("subevent",subevent);

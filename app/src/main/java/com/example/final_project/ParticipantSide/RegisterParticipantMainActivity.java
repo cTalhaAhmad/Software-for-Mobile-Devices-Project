@@ -65,28 +65,7 @@ public class RegisterParticipantMainActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
                 //////SubEvent
                 int pos = spinner.getSelectedItemPosition();
-/*
-                String event = eventList.get(pos);
-                reference = database.getReference("/event");
 
-                reference.child(event).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-                        for (DataSnapshot snapshot : datasnapshot.getChildren()) {
-                            String subEvent = snapshot.getKey();
-                            if (!subEvent.equals("test")) {
-                                subEventList.add(subEvent);
-                            }
-
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-*/
 
             }
 

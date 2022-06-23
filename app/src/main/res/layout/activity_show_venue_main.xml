@@ -11,13 +11,14 @@
         android:layout_width="268dp"
         android:layout_height="77dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="TextView"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Venue"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/venuelist"
