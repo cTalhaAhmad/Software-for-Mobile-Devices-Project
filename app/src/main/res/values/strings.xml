@@ -5,4 +5,10 @@
     <string name="password">password</string>
     <string name="username1">username</string>
     <string name="password1">Password</string>
+    <string name="add_event">add event</string>
+    <string name="event_name_here">Event Name Here</string>
+    <string name="event">Event</string>
+    <string name="username_here">Username Here</string>
+    <string name="password_here">Password Here</string>
+    <string name="todo">TODO</string>
 </resources>

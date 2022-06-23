@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +9,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="170dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/a13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btnsetvenue"
@@ -40,15 +57,6 @@
         android:text="SignIn OC" />
 
     <Button
-        android:layout_width="250dp"
-        android:layout_height="10dp"
-        android:layout_margin="30dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/black"
-        android:onClick="goto_user_signUP"
-        android:text="SignUp User" />
-
-    <Button
         android:id="@+id/btnallregoc"
         android:layout_width="250dp"
         android:layout_height="10dp"
@@ -57,4 +65,14 @@
         android:backgroundTint="@color/black"
         android:onClick="goto_user_signin"
         android:text="SignIn User" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="10dp"
+        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:onClick="goto_user_signUP"
+        android:text="SignUp User" />
+
 </LinearLayout>

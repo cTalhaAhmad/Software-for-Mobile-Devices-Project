@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,6 +8,22 @@
     android:orientation="vertical"
     android:paddingTop="200dp"
     tools:context=".AdminSide.AddMentorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="170dp"
+            android:layout_height="78dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/a13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +38,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/username"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/edtevent"
@@ -30,7 +48,8 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/username1"
+            android:gravity="center"
+            android:hint="@string/username_here"
             android:inputType="textPersonName"
             android:textSize="20sp" />
     </LinearLayout>
@@ -48,7 +67,8 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/password1"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
 
@@ -58,7 +78,8 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/password"
+            android:gravity="center"
+            android:hint="@string/password_here"
             android:inputType="textPassword"
             android:textSize="20sp" />
     </LinearLayout>
@@ -68,6 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
+        android:backgroundTint="@android:color/black"
         android:onClick="add_mentor"
         android:text="@string/add_mentor"
         android:textSize="20sp" />
