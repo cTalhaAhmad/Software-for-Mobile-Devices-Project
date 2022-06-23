@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingTop="200dp"
-    tools:context=".MentorSide.SigninMentorMainActivity">
+    tools:context=".AdminSide.AdminSigninMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,11 +65,11 @@
 
     <Button
         android:id="@+id/button"
-        android:onClick="mentor_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="70dp"
-        android:text="mentor signin"
+        android:onClick="admin_signin"
+        android:text="Admin Siginin"
         android:textSize="20sp" />
 
 

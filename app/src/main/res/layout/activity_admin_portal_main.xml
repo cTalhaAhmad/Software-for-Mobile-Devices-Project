@@ -6,9 +6,15 @@
     android:layout_height="match_parent"
     android:layout_weight="5"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".AdminSide.AdminPortalMainActivity">
 
-
+    <TextView
+        android:id="@+id/txtmentor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_weight="1"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnsetvenue"
@@ -16,17 +22,17 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_weight="1"
-        android:onClick="goto_admin_sigin"
-        android:text="SignIn Admin" />
+        android:onClick="add_event"
+        android:text="Add Events" />
 
     <Button
         android:id="@+id/btnsetscore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
+        android:onClick="reg_mentor"
         android:layout_weight="1"
-        android:onClick="goto_mentor_signin"
-        android:text="SignIn Mentor" />
+        android:text="Register OC" />
 
     <Button
         android:id="@+id/btneventupdt"
@@ -34,16 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_weight="1"
-        android:onClick="goto_oc_signin"
-        android:text="SignIn  OC" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:layout_weight="1"
-        android:onClick="goto_user_signUP"
-        android:text="SignUp User" />
+        android:onClick="goto_assign_event"
+        android:text="Assign Event" />
 
     <Button
         android:id="@+id/btnallregoc"
@@ -51,6 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_weight="1"
-        android:onClick="goto_user_signin"
-        android:text="SignIn User" />
+        android:onClick="show_reg_admin"
+        android:text="All Registeration" />
 </LinearLayout>
