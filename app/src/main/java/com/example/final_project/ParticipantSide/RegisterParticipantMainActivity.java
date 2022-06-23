@@ -1,8 +1,5 @@
 package com.example.final_project.ParticipantSide;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +7,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.final_project.R;
 import com.google.firebase.database.DataSnapshot;
@@ -120,13 +120,13 @@ public class RegisterParticipantMainActivity extends AppCompatActivity {
     public void signUp(View view) {
         reference = database.getReference("/user");
         int subpos = subSpinner.getSelectedItemPosition();
-        String subevnt = subEventList.get(subpos).toString();
+        String subevnt = subEventList.get(subpos);
         int pos = spinner.getSelectedItemPosition();
-        String user= editTextName.getText().toString();
-        String pass=editTextPass.getText().toString();
-        String evnt = eventList.get(pos).toString();
+        String user = editTextName.getText().toString();
+        String pass = editTextPass.getText().toString();
+        String evnt = eventList.get(pos);
 //        reference.child("password").setValue()
-        if ((!evnt.isEmpty()) && (!subevnt.isEmpty())&&(!user.isEmpty())&&(!pass.isEmpty())) {
+        if ((!evnt.isEmpty()) && (!subevnt.isEmpty()) && (!user.isEmpty()) && (!pass.isEmpty())) {
             reference.child(user).child("password").setValue(pass);
             reference.child(user).child("event").setValue(evnt);
             reference.child(user).child("subevent").setValue(subevnt);

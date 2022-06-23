@@ -1,14 +1,14 @@
 package com.example.final_project.AdminSide;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.final_project.R;
 import com.google.firebase.database.DataSnapshot;
@@ -28,7 +28,7 @@ public class AssignEventMainActivity extends AppCompatActivity {
     Semaphore semaphore;
     ArrayList<String> eventList;
     ArrayList<String> mentorList;
-    EditText editTextMentor,editTextEvent;
+    EditText editTextMentor, editTextEvent;
 
 
     @Override
@@ -36,18 +36,17 @@ public class AssignEventMainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assign_event_main);
-        editTextEvent=findViewById(R.id.edtevent);
-        editTextMentor=findViewById(R.id.edtoc);
-        eventList=new ArrayList<String>();
-        mentorList=new ArrayList<String>();
+        editTextEvent = findViewById(R.id.edtevent);
+        editTextMentor = findViewById(R.id.edtoc);
+        eventList = new ArrayList<String>();
+        mentorList = new ArrayList<String>();
 
-        context=getApplicationContext();
-        database= FirebaseDatabase.
+        context = getApplicationContext();
+        database = FirebaseDatabase.
                 getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
-        reference= database.getReference("");
+        reference = database.getReference("");
         getData();
-        
-        
+
 
     }
 
@@ -91,28 +90,26 @@ public class AssignEventMainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        
+
 
     }
 
     public void assign_event(View view) throws InterruptedException {
-        String eventTxt=editTextEvent.getText().toString();
-        String mentorTxt=editTextMentor.getText().toString();
-        if (eventTxt.isEmpty() || mentorTxt.isEmpty()){
+        String eventTxt = editTextEvent.getText().toString();
+        String mentorTxt = editTextMentor.getText().toString();
+        if (eventTxt.isEmpty() || mentorTxt.isEmpty()) {
             Toast.makeText(this, "Enter User Name And Password", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
 
             if (eventList.contains(eventTxt)
-                    && mentorList.contains(mentorTxt)){
+                    && mentorList.contains(mentorTxt)) {
                 reference = database.getReference("/mentor");
                 reference.child(mentorTxt).child("event").setValue(eventTxt);
-            }
-            else {
+            } else {
                 Toast.makeText(this, "Event or Mentor Does Not Exist", Toast.LENGTH_SHORT).show();
 
             }
         }
-        
+
     }
 }

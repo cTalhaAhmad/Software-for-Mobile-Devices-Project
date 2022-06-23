@@ -1,13 +1,13 @@
 package com.example.final_project.OCsideSide;
 
+import android.content.Context;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
-import android.os.Bundle;
 
 import com.example.final_project.R;
 import com.google.firebase.database.DataSnapshot;
@@ -26,16 +26,17 @@ public class ShowRegMainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     Context context;
     RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_reg_main);
-        regList=new ArrayList<Reg>();
-        recyclerView=findViewById(R.id.recview);
-        database= FirebaseDatabase.getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
-        reference= database.getReference("mentor");
+        regList = new ArrayList<Reg>();
+        recyclerView = findViewById(R.id.recview);
+        database = FirebaseDatabase.getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
+        reference = database.getReference("mentor");
 
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
@@ -50,17 +51,17 @@ public class ShowRegMainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 for (DataSnapshot snapshot : datasnapshot.getChildren()) {
-                    HashMap<String,String> data= (HashMap<String,String>)snapshot.getValue();
-                    Reg reg=new Reg();
-                    if(!data.toString().equals("")&&snapshot.getKey()!=null){
-                    reg.setUser(snapshot.getKey());
-                    reg.setSubEvent(data.get("subevent"));
-                    reg.setEvent(data.get("event"));
-                    regList.add(reg);
+                    HashMap<String, String> data = (HashMap<String, String>) snapshot.getValue();
+                    Reg reg = new Reg();
+                    if (!data.toString().equals("") && snapshot.getKey() != null) {
+                        reg.setUser(snapshot.getKey());
+                        reg.setSubEvent(data.get("subevent"));
+                        reg.setEvent(data.get("event"));
+                        regList.add(reg);
 
 
                     }
-                    adapter= new RegAdapter(regList);
+                    adapter = new RegAdapter(regList);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
 

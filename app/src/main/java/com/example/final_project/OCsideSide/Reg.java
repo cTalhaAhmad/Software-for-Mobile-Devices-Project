@@ -8,6 +8,12 @@ public class Reg {
     public Reg() {
     }
 
+    public Reg(String user, String event, String subEvent) {
+        this.user = user;
+        this.event = event;
+        SubEvent = subEvent;
+    }
+
     public String getUser() {
         return user;
     }
@@ -31,13 +37,6 @@ public class Reg {
     public void setSubEvent(String subEvent) {
         SubEvent = subEvent;
     }
-
-    public Reg(String user, String event, String subEvent) {
-        this.user = user;
-        this.event = event;
-        SubEvent = subEvent;
-    }
-
 
 
 }

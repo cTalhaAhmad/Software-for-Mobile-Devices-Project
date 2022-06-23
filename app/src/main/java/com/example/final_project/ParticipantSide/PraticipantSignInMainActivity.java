@@ -1,8 +1,5 @@
 package com.example.final_project.ParticipantSide;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.final_project.MentorSide.MentorPortalActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.final_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -55,8 +54,8 @@ public class PraticipantSignInMainActivity extends AppCompatActivity {
                                     Toast.makeText(context, "login", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(context, PortalParticipantMainActivity.class);
                                     intent.putExtra("user", editTextName.getText().toString());
-                                    intent.putExtra("event",event);
-                                    intent.putExtra("subevent",subEvent);
+                                    intent.putExtra("event", event);
+                                    intent.putExtra("subevent", subEvent);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(context, "Incorrect Password", Toast.LENGTH_SHORT).show();

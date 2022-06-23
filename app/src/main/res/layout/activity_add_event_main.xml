@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/a12"
     android:orientation="vertical"
     android:paddingTop="200dp"
     tools:context=".AdminSide.AddEventMainActivity">
@@ -30,7 +30,7 @@
             android:layout_weight="1"
             android:autofillHints=""
             android:ems="10"
-            android:hint="Event Name"
+            android:hint="Enter Event Name Here"
             android:inputType="textPersonName"
             android:textSize="20sp" />
     </LinearLayout>
@@ -42,6 +42,8 @@
         android:layout_margin="70dp"
         android:onClick="add_event"
         android:text="add event"
+        android:backgroundTint="@color/black"
+
         android:textSize="20sp" />
 
 

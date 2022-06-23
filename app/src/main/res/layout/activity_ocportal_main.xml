@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="5"
+    android:background="@drawable/a11"
     android:orientation="vertical"
     tools:context=".OCsideSide.OCportalMainActivity">
 
@@ -29,26 +29,26 @@
         android:id="@+id/btnsetscore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="click_set_winner"
         android:layout_margin="30dp"
         android:layout_weight="1"
+        android:onClick="click_set_winner"
         android:text="Set Scoreboard" />
 
     <Button
         android:id="@+id/btneventupdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="click_update_event"
         android:layout_margin="30dp"
         android:layout_weight="1"
+        android:onClick="click_update_event"
         android:text="Event-Upate" />
 
     <Button
         android:id="@+id/btnallregoc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="show_reg_oc"
         android:layout_margin="30dp"
         android:layout_weight="1"
+        android:onClick="show_reg_oc"
         android:text="All Registeration" />
 </LinearLayout>

@@ -1,14 +1,14 @@
 package com.example.final_project.MentorSide;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.final_project.OCsideSide.ShowRegMainActivity;
 import com.example.final_project.R;
@@ -28,20 +28,21 @@ public class MentorPortalActivity extends AppCompatActivity {
     DatabaseReference reference;
     Context context;
     String event;
-    Button buttonAddSubEvent,buttonRegOC,buttonAssignEvent,buttonEventShow;
+    Button buttonAddSubEvent, buttonRegOC, buttonAssignEvent, buttonEventShow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mentor_portal);
-        database=FirebaseDatabase.getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
-        reference= database.getReference("mentor");
-        buttonAddSubEvent=findViewById(R.id.btnsetvenue);
-        buttonAssignEvent=findViewById(R.id.btneventupdt);
-        buttonRegOC=findViewById(R.id.btnsetscore);
-        buttonEventShow=findViewById(R.id.btnallregoc);
-        intent= getIntent();
-        username= intent.getStringExtra("mentor").toString();
-        textViewMentor=findViewById(R.id.txtmentor);
+        database = FirebaseDatabase.getInstance("https://final-project-3c36c-default-rtdb.firebaseio.com/");
+        reference = database.getReference("mentor");
+        buttonAddSubEvent = findViewById(R.id.btnsetvenue);
+        buttonAssignEvent = findViewById(R.id.btneventupdt);
+        buttonRegOC = findViewById(R.id.btnsetscore);
+        buttonEventShow = findViewById(R.id.btnallregoc);
+        intent = getIntent();
+        username = intent.getStringExtra("mentor");
+        textViewMentor = findViewById(R.id.txtmentor);
         textViewMentor.setText(username);
     }
 
@@ -51,13 +52,12 @@ public class MentorPortalActivity extends AppCompatActivity {
         reference.child(username).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if (task.getResult().getValue()!=null){
-                    HashMap<String,String> passHash = (HashMap<String, String>) task.getResult().getValue();
-                     event=passHash.get("event");
-                    if (event!=null) {
+                if (task.getResult().getValue() != null) {
+                    HashMap<String, String> passHash = (HashMap<String, String>) task.getResult().getValue();
+                    event = passHash.get("event");
+                    if (event != null) {
                         textViewMentor.setText("Hi " + username + " your are mentor of " + event);
-                    }
-                    else{
+                    } else {
                         buttonAddSubEvent.setEnabled(false);
                         buttonAssignEvent.setEnabled(false);
                         buttonEventShow.setEnabled(false);
@@ -67,29 +67,30 @@ public class MentorPortalActivity extends AppCompatActivity {
                     }
 
                 }
-        }});
+            }
+        });
     }
 
     public void add_sub_event(View view) {
-        Intent intent= new Intent(this, AddSubEventMainActivity.class);
-        intent.putExtra("event",event);
+        Intent intent = new Intent(this, AddSubEventMainActivity.class);
+        intent.putExtra("event", event);
         startActivity(intent);
     }
 
     public void reg_oc(View view) {
-        Intent intent= new Intent(this, AddOCMainActivity.class);
-        intent.putExtra("event",event);
+        Intent intent = new Intent(this, AddOCMainActivity.class);
+        intent.putExtra("event", event);
         startActivity(intent);
     }
 
     public void goto_assign_subevent(View view) {
-        Intent intent= new Intent(this, AssginSubEventMainActivity.class);
-        intent.putExtra("event",event);
+        Intent intent = new Intent(this, AssginSubEventMainActivity.class);
+        intent.putExtra("event", event);
         startActivity(intent);
     }
 
     public void show_reg_mentor(View view) {
-        Intent intent1=new Intent(this, ShowRegMainActivity.class);
+        Intent intent1 = new Intent(this, ShowRegMainActivity.class);
         startActivity(intent1);
     }
 }
