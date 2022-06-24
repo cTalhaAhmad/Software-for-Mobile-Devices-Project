@@ -54,7 +54,7 @@
         android:layout_weight="1"
         android:backgroundTint="@color/black"
         android:onClick="reg_mentor"
-        android:text="Register OC" />
+        android:text="Register Mentor" />
 
     <Button
         android:id="@+id/btnallregoc"

@@ -42,8 +42,8 @@ public class OCportalMainActivity extends AppCompatActivity {
         buttonShowReg = findViewById(R.id.btnallregoc);
         intent = getIntent();
         username = intent.getStringExtra("oc");
-        textViewMentor = findViewById(R.id.txtmentor);
-        textViewMentor.setText(username);
+//        textViewMentor = findViewById(R.id.txtmentor);
+//        textViewMentor.setText(username);
 
         reference.child(username).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -53,13 +53,13 @@ public class OCportalMainActivity extends AppCompatActivity {
                     event = passHash.get("event");
                     subevent = passHash.get("subevent");
                     if (event != null) {
-                        textViewMentor.setText("Hi " + username + " your are OC of Sub-Event: " + event);
+//                        textViewMentor.setText("Hi " + username + " your are OC of Sub-Event: " + event);
                     } else {
                         buttonaddVenue.setEnabled(false);
                         buttonEventUpdate.setEnabled(false);
                         buttonShowReg.setEnabled(false);
                         buttonScore.setEnabled(false);
-                        textViewMentor.setText("Hi " + username + " your are not mentor of any event ");
+//                        textViewMentor.setText("Hi " + username + " your are not mentor of any event ");
 
                     }
 

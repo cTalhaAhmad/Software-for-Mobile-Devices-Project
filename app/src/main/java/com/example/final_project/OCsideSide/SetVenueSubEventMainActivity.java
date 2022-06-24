@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SetVenueSubEventMainActivity extends AppCompatActivity {
-    TextView textView;
+//    TextView textView;
     EditText editTextSubEvent;
     String event, subevent;
     Intent intent;
@@ -36,8 +36,8 @@ public class SetVenueSubEventMainActivity extends AppCompatActivity {
 
         editTextSubEvent = findViewById(R.id.edtevent);
 
-        textView = findViewById(R.id.textmainevent);
-        textView.setText("Add Venue of Sub-Events: " + subevent);
+//        textView = findViewById(R.id.textmainevent);
+//        textView.setText("Add Venue of Sub-Events: " + subevent);
 
     }
 

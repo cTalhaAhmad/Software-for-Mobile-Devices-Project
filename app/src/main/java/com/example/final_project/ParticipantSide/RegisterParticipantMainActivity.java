@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -118,18 +119,26 @@ public class RegisterParticipantMainActivity extends AppCompatActivity {
     }
 
     public void signUp(View view) {
-        reference = database.getReference("/user");
-        int subpos = subSpinner.getSelectedItemPosition();
-        String subevnt = subEventList.get(subpos);
-        int pos = spinner.getSelectedItemPosition();
-        String user = editTextName.getText().toString();
-        String pass = editTextPass.getText().toString();
-        String evnt = eventList.get(pos);
+        if (!subEventList.isEmpty()) {
+            reference = database.getReference("/user");
+            int subpos = subSpinner.getSelectedItemPosition();
+            String subevnt = subEventList.get(subpos);
+            int pos = spinner.getSelectedItemPosition();
+            String user = editTextName.getText().toString();
+            String pass = editTextPass.getText().toString();
+            String evnt = eventList.get(pos);
 //        reference.child("password").setValue()
-        if ((!evnt.isEmpty()) && (!subevnt.isEmpty()) && (!user.isEmpty()) && (!pass.isEmpty())) {
-            reference.child(user).child("password").setValue(pass);
-            reference.child(user).child("event").setValue(evnt);
-            reference.child(user).child("subevent").setValue(subevnt);
+            if ((!evnt.isEmpty()) && (!subevnt.isEmpty()) && (!user.isEmpty()) && (!pass.isEmpty())) {
+                reference.child(user).child("password").setValue(pass);
+                reference.child(user).child("event").setValue(evnt);
+                reference.child(user).child("subevent").setValue(subevnt);
+            }
+            else {
+                Toast.makeText(context, "Enter Username and password", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else{
+            Toast.makeText(context, "No Sub Event Selected", Toast.LENGTH_SHORT).show();
         }
     }
 }

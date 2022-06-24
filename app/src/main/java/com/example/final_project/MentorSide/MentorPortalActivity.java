@@ -42,8 +42,8 @@ public class MentorPortalActivity extends AppCompatActivity {
         buttonEventShow = findViewById(R.id.btnallregoc);
         intent = getIntent();
         username = intent.getStringExtra("mentor");
-        textViewMentor = findViewById(R.id.txtmentor);
-        textViewMentor.setText(username);
+//        textViewMentor = findViewById(R.id.txtmentor);
+//        textViewMentor.setText(username);
     }
 
     @Override
@@ -56,13 +56,13 @@ public class MentorPortalActivity extends AppCompatActivity {
                     HashMap<String, String> passHash = (HashMap<String, String>) task.getResult().getValue();
                     event = passHash.get("event");
                     if (event != null) {
-                        textViewMentor.setText("Hi " + username + " your are mentor of " + event);
+//                        textViewMentor.setText("Hi " + username + " your are mentor of " + event);
                     } else {
                         buttonAddSubEvent.setEnabled(false);
                         buttonAssignEvent.setEnabled(false);
                         buttonEventShow.setEnabled(false);
                         buttonRegOC.setEnabled(false);
-                        textViewMentor.setText("Hi " + username + " your are not mentor of any event ");
+//                        textViewMentor.setText("Hi " + username + " your are not mentor of any event ");
 
                     }
 

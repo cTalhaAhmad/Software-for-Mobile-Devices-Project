@@ -96,9 +96,9 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_weight="1"
             android:gravity="center_horizontal"
+            android:text="Event"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:text="Event" />
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/dropevents"
@@ -122,10 +122,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_weight="1"
-            android:textStyle="bold"
-            android:textSize="20dp"
             android:gravity="center_horizontal"
-            android:text="Sub-event" />
+            android:text="Sub-event"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/dropsubevent"
@@ -139,12 +139,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="273dp"
+        android:layout_height="62dp"
         android:layout_margin="70dp"
+        android:backgroundTint="@color/black"
         android:onClick="signUp"
         android:text="signUp"
-        android:backgroundTint="@color/black"
         android:textSize="20sp" />
 
 

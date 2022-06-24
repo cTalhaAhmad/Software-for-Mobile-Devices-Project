@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddSubEventMainActivity extends AppCompatActivity {
 
-    TextView textView;
+//    TextView textView;
     EditText editTextSubEvent;
     String event;
     Intent intent;
@@ -34,8 +34,8 @@ public class AddSubEventMainActivity extends AppCompatActivity {
 
         editTextSubEvent = findViewById(R.id.edtevent);
 
-        textView = findViewById(R.id.textmainevent);
-        textView.setText("Add Sub-Events in " + event);
+//        textView = findViewById(R.id.textmainevent);
+//        textView.setText("Add Sub-Events in " + event);
 
 
     }
